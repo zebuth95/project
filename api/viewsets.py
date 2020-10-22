@@ -79,8 +79,7 @@ def binary_gap(n):
         return "el valor ingresado no es valido"
 
 class Test_One(APIView):
-    #permission_classes = [IsAuthenticated]
-
+    permission_classes = [permissions.AllowAny]
     def post(self, request, *args, **kwargs):
         try:
             data = request.data['entero']
