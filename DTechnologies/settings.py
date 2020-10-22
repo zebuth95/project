@@ -93,6 +93,10 @@ CORS_ALLOW_CREDENTIALS=True
 
 WSGI_APPLICATION = 'DTechnologies.wsgi.application'
 
+CORS_ORIGIN_WHITELIST = [
+    'https://project-react.jaes9511.vercel.app',
+]
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
