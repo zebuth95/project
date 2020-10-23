@@ -17,7 +17,7 @@ def current_user(request):
     return Response(serializer.data)
 
 class ProjectViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
@@ -33,7 +33,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 class TaskViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
@@ -44,7 +44,7 @@ class TaskViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 class CommentViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
